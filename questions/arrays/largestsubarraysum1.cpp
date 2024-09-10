@@ -1,6 +1,6 @@
 //As the heading depicts here we have to iterate through the given array and find the max sum
 
-//1.Brute-Force approach- O(N)^3
+//1.Brute-Force approach- O(N^3)
 
 #include<iostream>
 using namespace std;
