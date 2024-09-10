@@ -14,11 +14,12 @@ int MAX_SUBSUM(int arr[],int size)
     }
     //largest sum logic
     int maxsum=0;
+    int sub_sum=0;
     for(int i=0;i<size;i++)
     {
         for(int j=i;j<size;j++){
       
-          int sub_sum= i >0?prefix_sum_arr[j]-prefix_sum_arr[i-1]:prefix_sum_arr[j];  //if(i>0){sub_sum=prefix_sum_arr[j]-prefixsum[i-1](as i!=0)}else{return prefix_sum_arr[j]}
+          sub_sum= i >0?prefix_sum_arr[j]-prefix_sum_arr[i-1]:prefix_sum_arr[j];  //if(i>0){sub_sum=prefix_sum_arr[j]-prefixsum[i-1](as i!=0)}else{return prefix_sum_arr[j]}
         maxsum=max(maxsum,sub_sum);
         } //i is for the staring range of the sub-array sum,   j is for the end endpoint of the sub-array sum
     }
